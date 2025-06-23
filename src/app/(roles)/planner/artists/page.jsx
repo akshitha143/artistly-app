@@ -5,12 +5,11 @@ import { Input } from "@/components/ui/input";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Button } from "@/components/ui/button";
 import allArtists from "@/data/artists";
-import { Plus } from "lucide-react";
 import { useRouter } from "next/navigation";
 const ITEMS_PER_PAGE = 10;
 
 const ArtistsPage = () => {
-   const router = useRouter();
+
   const [searchQuery, setSearchQuery] = useState("");
   const [categoryFilter, setCategoryFilter] = useState("");
   const [locationFilter, setLocationFilter] = useState("");
