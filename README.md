@@ -1,36 +1,114 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Artistly.com – Frontend Project
 
-## Getting Started
+A responsive web application for **Artistly.com**, a fictional performing artist booking platform.  
+The app supports **Manager** and **Planner** roles with role-based routing and functionality.
 
-First, run the development server:
+---
 
+## 🚀 Project Overview
+
+**Artistly.com** allows:
+- **Manager**: Onboard artists, manage submissions, and handle booking requests.
+- **Planner**: Browse artists, filter listings, and raise booking/availability requests.
+
+The app is frontend-only using mock JSON data (no backend).
+
+---
+
+## ⚙ Tech Stack
+
+- **Next.js (v13+, App Router)** — React framework with SSR and routing.
+- **React (functional components + hooks)** — UI composition and state.
+- **Tailwind CSS** — Utility-first styling.
+- **shadcn/ui** — Accessible, prebuilt UI components.
+- **React Hook Form + Yup** — Form handling + validation.
+- **Vercel** — Deployment.
+
+---
+
+## 📂 Folder Structure
+
+src/
+├── app/
+│ ├── manager/
+│ │ ├── dashboard/
+│ │ ├── artists/
+│ │ ├── onboarding/
+│ │ └── requests/
+│ ├── planner/
+│ │ ├── dashboard/
+│ │ ├── artists/
+│ │ └── my-requests/
+│ ├── signin/
+│ └── layout.js
+├── components/
+│ ├── Navbar.js
+│ ├── Footer.js
+│ ├── Tables/
+│ ├── Manager/
+│ ├── Planner/
+│ └── UI/
+├── context/
+│ └── UserContext.js
+├── data/
+│ └── artists.json
+└── styles/
+
+
+---
+
+## 🧭 Role-Based Routing
+
+### Manager
+- `/manager/dashboard` — View submissions & requests
+- `/manager/artists` — View onboarded artists
+- `/manager/onboarding` — Onboard new artists
+- `/manager/requests` — Manage planner requests
+
+### Planner
+- `/planner/dashboard` — Overview page
+- `/planner/artists` — Browse and filter artists, ask for quote
+- `/planner/my-requests` — View booking requests
+
+---
+
+## 🖥 Features
+
+- **Role-based sign-in** with context
+- **Manager**: Dashboard, onboarding form, artist & request management
+- **Planner**: Browse artists, filter, raise/view requests
+- **Reusable components**: Navbar, Footer, Tables
+- **Responsive design** (mobile-first)
+- **Mock data driven** (artists.json)
+
+---
+
+## 🌐 Deployment
+
+✅ Hosted on Vercel (SEO-friendly, responsive)
+## 🔗 Live Demo
+
+[View Live on Vercel](https://artistly-app-puce.vercel.app)
+
+---
+
+## 💻 Getting Started
+
+### 1️⃣ Clone the repo:
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+git clone https://github.com/your-username/artistly-frontend.git
+cd artistly-frontend
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+npm install
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+npm run build
+npm start
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+👉 **What’s next?**
+✅ I can save this as a file (`README.md`) for download.  
+✅ I can also help you update GitHub repo instructions or generate badges (build passing, license, etc).
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Would you like me to save this as a downloadable file? 🚀
