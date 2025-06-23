@@ -32,7 +32,7 @@ const ArtistsPage = () => {
       .filter(artist =>
       priceFilter ? artist.priceRange === priceFilter : true
     );
-  }, [searchQuery, categoryFilter, locationFilter]);
+  }, [searchQuery, categoryFilter, locationFilter,priceFilter]);
 
   
   const totalPages = Math.ceil(filteredArtists.length / ITEMS_PER_PAGE);

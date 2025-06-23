@@ -15,7 +15,7 @@ const ArtistsPage = () => {
   const [locationFilter, setLocationFilter] = useState("");
   const [priceFilter, setPriceFilter] = useState("");
   const [currentPage, setCurrentPage] = useState(1);
-
+  
   
   const filteredArtists = useMemo(() => {
     return allArtists
@@ -25,14 +25,15 @@ const ArtistsPage = () => {
       .filter((artist) =>
         categoryFilter ? artist.category === categoryFilter : true
       )
+      .filter(artist =>
+      priceFilter ? artist.priceRange === priceFilter : true
+      )
       .filter((artist) =>
         locationFilter ? artist.location === locationFilter : true
       )
-      .filter(artist =>
-      priceFilter ? artist.priceRange === priceFilter : true
-    );
-  }, [searchQuery, categoryFilter, locationFilter]);
-
+    ;
+  }, [searchQuery, categoryFilter,locationFilter,priceFilter]);
+  
   
   const totalPages = Math.ceil(filteredArtists.length / ITEMS_PER_PAGE);
   const paginatedArtists = filteredArtists.slice(
@@ -76,6 +77,7 @@ const ArtistsPage = () => {
 
         <Select
           onValueChange={(value) => {
+
             setLocationFilter(value === "all" ? "" : value);
             setCurrentPage(1);
           }}
@@ -101,8 +103,9 @@ const ArtistsPage = () => {
             <SelectValue placeholder="Filter by price range" />
         </SelectTrigger>
         <SelectContent>
+            <SelectItem value="all">All</SelectItem>
             {
-                ["all","₹10,000 - ₹20,000","₹20,000 - ₹40,000","₹40,000 - ₹60,000","₹60,000 - ₹1,00,000"].map((item,id)=>{
+                [...new Set(allArtists.map(a => a.priceRange))].map((item,id)=>{
                     return <SelectItem key={id} value={item}>{item}</SelectItem>;
                 })
             }
