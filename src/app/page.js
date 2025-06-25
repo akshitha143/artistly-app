@@ -21,6 +21,15 @@ export default function Home() {
     }
   }, [router,role,loading]);
 
-  return null;
+  return (
+    <>
+      <head>
+        <title>Artistly</title>
+        <meta name="description" content="Welcome to Artistly, your platform for managing artists and events." />
+        <meta name="keywords" content="artists, management, events, planner, manager" />
+      </head>
+      {null}
+    </>
+  );
 
 }

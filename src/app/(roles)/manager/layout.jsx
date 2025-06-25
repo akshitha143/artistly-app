@@ -1,5 +1,6 @@
 import AppFooter from "@/components/footers/AppFooter";
 import { AppNavbar } from "../../../components/Navbars/index";
+import RoleGuard from "@/components/RoleGuade";
 
 const  ManagerLayout  = ({children})=>{
     const navmenu = [
@@ -26,7 +27,9 @@ const  ManagerLayout  = ({children})=>{
         <div className="w-full min-h-screen flex flex-col justify-start items-center">
             <AppNavbar navmenu={navmenu} />
             <main className="w-full grow flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-              {children}
+              <RoleGuard allowedRoles={["manager"]}>
+                {children}
+              </RoleGuard>
             </main>
             <AppFooter/>
         </div>
