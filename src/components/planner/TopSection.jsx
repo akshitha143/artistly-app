@@ -19,7 +19,7 @@ const TopSection = ()=>{
                             <h1 className="text-center text-lg md:text-2xl font-bold mb-4">Discover Talented Artists for Every Occasion</h1>
                             <p className="text-xs md:text-lg text-gray-200">
                                 At Artistly, we connect you with skilled singers, dancers, DJs, comedians, and performers from across India — ready to make your event truly special                            </p>
-                            <button onClick={()=>{router.push("/planner/artists")}} className="bg-brand mt-6 px-4 py-2 text-sm md:text-base text-white rounded-full font-medium">Brows Artists</button>
+                            <button tabIndex={0}  onClick={()=>{router.push("/planner/artists")}} className="bg-brand mt-6 px-4 py-2 text-sm md:text-base text-white rounded-full font-medium">Brows Artists</button>
                         </div>
                     </div>
                 </CarouselItem>
@@ -37,8 +37,8 @@ const TopSection = ()=>{
                 </CarouselItem>
                 
             </CarouselContent>
-            <CarouselPrevious className={"hidden group-hover:flex"} />
-            <CarouselNext className={"hidden group-hover:flex"}/>
+            <CarouselPrevious tabIndex={0} className={"hidden group-hover:flex"} />
+            <CarouselNext tabIndex={0}  className={"hidden group-hover:flex"}/>
         </Carousel>
         </div>
     );

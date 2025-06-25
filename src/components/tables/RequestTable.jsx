@@ -6,7 +6,7 @@ export const RequestTable = ({filteredRequests,handleAction,headerList,TableRow}
     return (
         <div className="overflow-x-auto">
             <table className="min-w-full text-sm text-left">
-              <thead className="bg-gray-100 text-gray-700 uppercase">
+              <thead className="bg-gray-200 text-gray-700 uppercase">
                 <tr>
                   {
                     
@@ -37,7 +37,7 @@ export const RequestTable = ({filteredRequests,handleAction,headerList,TableRow}
 
 export const  TableRowManager = ({ req, handleAction })=>{
     return (
-        <tr  className="border-b">
+        <tr tabIndex={0} className="border-b focus:bg-gray-50 hover:bg-gray-50 transition-colors duration-200">
             <td className="px-4 py-2 text-sm md:text-base">{req.artistName}</td>
             <td className="px-4 py-2 text-sm md:text-base">{req.eventDate}</td>
             <td className="px-4 py-2 text-sm md:text-base">{req.planner}</td>
@@ -69,7 +69,7 @@ export const  TableRowManager = ({ req, handleAction })=>{
 }
 export const  TableRowPlanner = ({ req, handleAction })=>{
     return (
-        <tr  className="border-b">
+        <tr tabIndex={0} className="border-b focus:bg-gray-50 hover:bg-gray-50 transition-colors duration-200">
             <td className="px-4 py-2 text-sm md:text-base">{req.artistName}</td>
             <td className="px-4 py-2 text-sm md:text-base">{req.eventDate}</td>
             <td className="px-4 py-2 text-sm md:text-base">{req.manager}</td>

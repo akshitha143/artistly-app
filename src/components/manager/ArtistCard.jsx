@@ -1,13 +1,12 @@
 "use client";
 import Image from "next/image";
 import { Card, CardContent } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
 
-export default function ArtistCard({ artist,askforquot }) {
-  const { name, category, location, priceRange, languages, imageUrl } = artist;
+export default function ArtistCard({ artist,askforquot,...props }) {
+  const { name, category, location, priceRange, languages, imageUrl} = artist;
 
   return (
-    <Card className="hover:shadow-lg transition-shadow cursor-pointer p-0 overflow-hidden">
+    <Card {...props} className="hover:shadow-lg hover:scale-105 focus:scale-[1.02] cursor-pointer p-0 overflow-hidden focus:ring-brand  focus:ring-[3px] focus:ring-offset-[2px] focus:outline-none transition-all duration-200 ease-in-out">
       <Image 
         src={ "/images/singer.jpeg"} 
         alt={name} 

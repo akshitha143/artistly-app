@@ -1,5 +1,4 @@
 "use client";
-
 import { useForm, Controller } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
@@ -8,9 +7,9 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Label } from "@/components/ui/label";
-import { Select, SelectTrigger, SelectValue, SelectContent, SelectItem } from "@/components/ui/select";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Textarea } from "@/components/ui/textarea";
+import Dropdown from "@/components/common/Dropdown";
 
 const schema = yup.object().shape({
   name: yup.string().required("Name is required"),
@@ -62,26 +61,26 @@ export default function OnboardingPage() {
           <CardTitle>Artist Onboarding</CardTitle>
         </CardHeader>
         <CardContent>
-          <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
+          <form onSubmit={handleSubmit(onSubmit)} className="space-y-8">
 
             {/* Name */}
             <div>
-              <Label className={"mb-1"} >Name</Label>
-              <Input {...register("name")} placeholder="Artist Name" />
-              {errors.name && <p className="text-red-500 text-xs">{errors.name.message}</p>}
+              <Label htmlFor="name"  className={"mb-2"} >Name</Label>
+              <Input id="name" name="name"  {...register("name")} placeholder="Artist Name" />
+              {errors.name && <p className="text-red-500 text-xs mt-1">{errors.name.message}</p>}
             </div>
 
             {/* Bio */}
             <div>
-              <Label className={"mb-1"}>Bio</Label>
-              <Textarea {...register("bio")} placeholder="Short bio" />
-              {errors.bio && <p className="text-red-500 text-xs">{errors.bio.message}</p>}
+              <Label htmlFor="bio" className={"mb-2"}>Bio</Label>
+              <Textarea id="bio" {...register("bio")} placeholder="Short bio" />
+              {errors.bio && <p className="text-red-500 text-xs mt-1">{errors.bio.message}</p>}
             </div>
 
             {/* Categories */}
             <div>
-              <Label className={"mb-1"}>Category</Label>
-              <div className="grid grid-cols-2 gap-2">
+              <Label  className={"mb-2"}>Category</Label>
+              <div  className="grid grid-cols-2 gap-2">
                 {categories.map((cat) => (
                   <div key={cat} className="flex items-center gap-2">
                     <Checkbox
@@ -94,13 +93,13 @@ export default function OnboardingPage() {
                   </div>
                 ))}
               </div>
-              {errors.category && <p className="text-red-500 text-xs">{errors.category.message}</p>}
+              {errors.category && <p className="text-red-500 text-xs mt-1">{errors.category.message}</p>}
             </div>
 
             {/* Languages */}
             <div>
-              <Label className={"mb-1"}>Languages</Label>
-              <div className="grid grid-cols-2 gap-2">
+              <Label  className={"mb-2"}>Languages</Label>
+              <div  className="grid grid-cols-2 gap-2">
                 {languages.map((lang) => (
                   <div key={lang} className="flex items-center gap-2">
                     <Checkbox
@@ -113,43 +112,40 @@ export default function OnboardingPage() {
                   </div>
                 ))}
               </div>
-              {errors.languages && <p className="text-red-500 text-xs">{errors.languages.message}</p>}
+              {errors.languages && <p className="text-red-500 text-xs mt-1">{errors.languages.message}</p>}
             </div>
 
             {/* Fee Range */}
             <div>
-              <Label className={"mb-1"}>Fee Range</Label>
+              <Label className={"mb-2"}>Fee Range</Label>
               <Controller
+                
                 control={control}
                 name="feeRange"
                 render={({ field }) => (
-                  <Select onValueChange={field.onChange}>
-                    <SelectTrigger>
-                      <SelectValue placeholder="Select fee range" />
-                    </SelectTrigger>
-                    <SelectContent>
-                      <SelectItem value="₹10,000 - ₹20,000">₹10,000 - ₹20,000</SelectItem>
-                      <SelectItem value="₹20,000 - ₹40,000">₹20,000 - ₹40,000</SelectItem>
-                      <SelectItem value="₹40,000 - ₹60,000">₹40,000 - ₹60,000</SelectItem>
-                    </SelectContent>
-                  </Select>
+                  <Dropdown
+                    options={[ "₹10,000 - ₹20,000", "₹20,000 - ₹40,000", "₹40,000 - ₹60,000", "₹60,000 - ₹1,00,000"]}
+                    onValueChange={field.onChange}
+                    placeholder="Select fee range"
+                    aria-label="Select price range"
+                  />
                 )}
               />
-              {errors.feeRange && <p className="text-red-500 text-xs">{errors.feeRange.message}</p>}
+              {errors.feeRange && <p className="text-red-500 text-xs mt-1">{errors.feeRange.message}</p>}
             </div>
 
             {/* Location */}
             <div>
-              <Label className={"mb-1"}>Location</Label>
-              <Input {...register("location")} placeholder="City or region" />
-              {errors.location && <p className="text-red-500 text-xs">{errors.location.message}</p>}
+              <Label htmlFor="address" className={"mb-2"}>Location</Label>
+              <Input id="address" name="location" {...register("location")} placeholder="City or region" />
+              {errors.location && <p className="text-red-500 text-xs mt-1">{errors.location.message}</p>}
             </div>
 
             {/* Profile Image URL */}
             <div>
-              <Label className={"mb-1"}>Profile Image URL (optional)</Label>
-              <Input {...register("imageUrl")} placeholder="https://example.com/photo.jpg" />
-              {errors.imageUrl && <p className="text-red-500 text-xs">{errors.imageUrl.message}</p>}
+              <Label htmlFor="imageurl" className={"mb-2"}>Profile Image URL (optional)</Label>
+              <Input id="imageurl"  {...register("imageUrl")} placeholder="https://example.com/photo.jpg" />
+              {errors.imageUrl && <p className="text-red-500 text-xs mt-1">{errors.imageUrl.message}</p>}
             </div>
 
             <Button type="submit" className="w-full">Submit Artist</Button>

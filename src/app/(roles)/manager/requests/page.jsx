@@ -5,6 +5,7 @@ import { Select, SelectTrigger, SelectValue, SelectContent, SelectItem } from "@
 
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { RequestTable ,TableRowManager} from "@/components/tables/RequestTable";
+import Dropdown from "@/components/common/Dropdown";
 
 // Mock data
 const mockRequests = [
@@ -48,20 +49,11 @@ export default function RequestsPage() {
               onChange={(e) => setSearchQuery(e.target.value)}
               className="w-full md:w-1/2"
             />
-            <Select
+            <Dropdown
+              options={["all", "Pending", "Approved", "Rejected"]}
               onValueChange={(value) => setStatusFilter(value)}
-              defaultValue="all"
-            >
-              <SelectTrigger className="w-full md:w-1/4">
-                <SelectValue placeholder="Filter by status" />
-              </SelectTrigger>
-              <SelectContent>
-                <SelectItem value="all">All</SelectItem>
-                <SelectItem value="Pending">Pending</SelectItem>
-                <SelectItem value="Approved">Approved</SelectItem>
-                <SelectItem value="Rejected">Rejected</SelectItem>
-              </SelectContent>
-            </Select>
+              placeholder="Filter by status"
+            />
           </div>
 
             <RequestTable TableRow={TableRowManager} headerList={["Artist","Event Date","Planner","Status","Actions"]} filteredRequests={filteredRequests} handleAction={handleAction}/>
