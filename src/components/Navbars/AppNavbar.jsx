@@ -2,7 +2,7 @@
 import Image from "next/image";
 import { useUser } from "../../context/UserContext";
 import { BrandSection, NavItem } from "../ui/navbar";
-import { Menu } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import { motion } from "motion/react"
@@ -75,7 +75,7 @@ export default function AppNavbar({navmenu}) {
         <div className="w-full h-full flex flex-col md:flex-row  justify-center items-center  bg-background z-50 px-4 py-3 md:px-0 md:py-0">
         <div className="w-full flex flex-row justify-between items-center px-4 md:px-0 md:w-auto order-1">
             <BrandSection/>
-            <Menu onClick={()=>{setOpen(!open)}} className="md:hidden w-8 h-8 text-text-primary"/>
+            {!open?<Menu onClick={()=>{setOpen(!open)}} className="md:hidden w-8 h-8 text-text-primary"/>:<X onClick={()=>{setOpen(!open)}} className="md:hidden w-8 h-8 text-text-primary"/>}
         </div>
         <div className="hidden grow md:flex  bg-background flex-row justify-end items-center gap-6 pr-4 order-2">
             {
