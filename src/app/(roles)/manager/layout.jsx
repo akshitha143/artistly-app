@@ -1,13 +1,13 @@
 import AppFooter from "@/components/footers/AppFooter";
 import { AppNavbar } from "../../../components/Navbars/index";
 import RoleGuard from "@/components/RoleGuade";
-export const metadata = {
-  icons: "/images/logo.png",
-  viewport: {
-    width: "device-width",
-    initialScale: 1,  
-  },
-};
+// export const metadata = {
+//   icons: "/favicon.ico",
+//   viewport: {
+//     width: "device-width",
+//     initialScale: 1,  
+//   },
+// };
 const  ManagerLayout  = ({children})=>{
     const navmenu = [
         {

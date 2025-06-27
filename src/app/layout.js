@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  icons: "/images/logo.png",
+  icons: "/favicon.png",
   viewport: {
     width: "device-width",
     initialScale: 1,  
