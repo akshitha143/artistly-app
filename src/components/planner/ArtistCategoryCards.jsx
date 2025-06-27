@@ -8,7 +8,7 @@ export default function ArtistCategoryCards() {
     {
       name: "Singers",
       link: "/planner/artists",
-      img: "https://images.unsplash.com/photo-1507874457470-272b3c8d8ee2"
+      img: "/images/singer.jpeg"
     },
     {
       name: "Dancers",
