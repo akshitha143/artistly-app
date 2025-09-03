@@ -1,6 +1,7 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { UserProvider } from "@/context/UserContext";
+import { Verified } from "lucide-react";
 
 
 const geistSans = Geist({
@@ -15,6 +16,9 @@ const geistMono = Geist_Mono({
 
 export const metadata = {
   icons: "/favicon.png",
+  Verification: {
+    google: "google-site-verification: google886f9b1cb3ef1d11.html",
+  },
   viewport: {
     width: "device-width",
     initialScale: 1,  
