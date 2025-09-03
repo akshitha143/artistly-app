@@ -17,7 +17,7 @@ const geistMono = Geist_Mono({
 export const metadata = {
   icons: "/favicon.png",
   Verification: {
-    google: "google-site-verification: google886f9b1cb3ef1d11.html",
+    google: "google-site-verification: google44adf7e3f67c1280.html",
   },
   viewport: {
     width: "device-width",
