@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
-<url><loc>https://artistly-app-puce.vercel.app/unauthorized</loc><lastmod>2025-09-05T10:32:35.885Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://artistly-app-puce.vercel.app</loc><lastmod>2025-09-05T10:32:35.886Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://artistly-app-puce.vercel.app/manager/artists</loc><lastmod>2025-09-05T10:32:35.886Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://artistly-app-puce.vercel.app/manager/requests</loc><lastmod>2025-09-05T10:32:35.886Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://artistly-app-puce.vercel.app/planner/artists</loc><lastmod>2025-09-05T10:32:35.886Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://artistly-app-puce.vercel.app/manager</loc><lastmod>2025-09-05T10:32:35.886Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://artistly-app-puce.vercel.app/planner</loc><lastmod>2025-09-05T10:32:35.886Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://artistly-app-puce.vercel.app/planner/requests</loc><lastmod>2025-09-05T10:32:35.886Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://artistly-app-puce.vercel.app/signin</loc><lastmod>2025-09-05T10:32:35.886Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://artistly-app-puce.vercel.app/manager/onboarding</loc><lastmod>2025-09-05T10:32:35.886Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://artistly-app-puce.vercel.app/signin</loc><lastmod>2025-09-05T10:49:39.429Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://artistly-app-puce.vercel.app/unauthorized</loc><lastmod>2025-09-05T10:49:39.430Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://artistly-app-puce.vercel.app/manager</loc><lastmod>2025-09-05T10:49:39.430Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://artistly-app-puce.vercel.app/planner/requests</loc><lastmod>2025-09-05T10:49:39.430Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://artistly-app-puce.vercel.app/manager/onboarding</loc><lastmod>2025-09-05T10:49:39.430Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://artistly-app-puce.vercel.app</loc><lastmod>2025-09-05T10:49:39.430Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://artistly-app-puce.vercel.app/planner</loc><lastmod>2025-09-05T10:49:39.430Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://artistly-app-puce.vercel.app/manager/requests</loc><lastmod>2025-09-05T10:49:39.430Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://artistly-app-puce.vercel.app/planner/artists</loc><lastmod>2025-09-05T10:49:39.430Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://artistly-app-puce.vercel.app/manager/artists</loc><lastmod>2025-09-05T10:49:39.430Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
 </urlset>
