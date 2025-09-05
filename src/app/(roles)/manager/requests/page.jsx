@@ -1,6 +1,6 @@
 import LazyRequestComp from "./LazyRequestComp";
 export const metadata = {
-  title: "Booking Requests",
+  title: "Booking Requests | Manager",
   description: "Manage booking requests for artists.",
   keywords: "booking, requests, artists, management",
 };

@@ -1,7 +1,7 @@
 import LazyRequestComp from "./LazyRequestComp";
 
 export const metadata = {
-    title: "Requests Management",
+    title: "Requests Management | Planner",
     description: "Manage requests, view details, and filter by status.",
     keywords: "requests, management, status, booking",
 };
