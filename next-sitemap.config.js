@@ -4,7 +4,7 @@ const config = {
   generateIndexSitemap: true,
   changefreq: 'daily',
   priority: 0.7,
-  sitemapSize: 10000,
+  sitemapSize: 50000,
 };
 
 export default config;
