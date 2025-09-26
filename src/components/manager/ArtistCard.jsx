@@ -28,7 +28,7 @@ export default function ArtistCard({ artist,askforquot,...props }) {
         <p className="text-sm text-gray-500">{category} | {location}</p>
         <p className="text-sm text-gray-500">Fee: {priceRange}</p>
         <p className="text-xs text-gray-500">Languages: {languages.join(", ")}</p>
-        {role=="planner" && <button onClick={handelClick} className="w-full h-auto rounded-lg mt-2 text-base text-white text-center bg-brand py-[6px]">Ask For Quote</button>}
+        {role=="planner" && <button onClick={handelClick} className="w-full h-auto rounded-lg mt-2 text-base text-white text-center bg-brand py-[6px] hover:cursor-pointer">Ask For Quote</button>}
       </CardContent>
     </Card>
   );
