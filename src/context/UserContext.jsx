@@ -5,6 +5,7 @@ const UserContext = createContext();
 
 export function UserProvider({ children }) {
   const [role, setRole] = useState(null); 
+  const [requests, setRequests] = useState([]);
   const [username, setUsername] = useState(null);
   const [loading, setLoading] = useState(true);
 
@@ -32,7 +33,7 @@ export function UserProvider({ children }) {
   }, []);
 
   return (
-    <UserContext.Provider value={{ role, username, login, logout,loading }}>
+    <UserContext.Provider value={{ role, username, login, logout,loading,requests,setRequests }}>
       {children}
     </UserContext.Provider>
   );

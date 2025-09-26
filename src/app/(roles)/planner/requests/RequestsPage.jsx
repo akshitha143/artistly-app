@@ -5,6 +5,7 @@ import { Select, SelectTrigger, SelectValue, SelectContent, SelectItem } from "@
 
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { RequestTable,TableRowPlanner } from "@/components/tables/RequestTable";
+import { useUser } from "@/context/UserContext";
 
 // Mock data
 const mockRequests = [
@@ -15,7 +16,8 @@ const mockRequests = [
 ];
 
 export default function RequestsPage() {
-  const [requests, setRequests] = useState(mockRequests);
+  // const [requests, setRequests] = useState(mockRequests);
+  const {requests,setRequests} = useUser();
   const [statusFilter, setStatusFilter] = useState("all");
   const [searchQuery, setSearchQuery] = useState("");
 

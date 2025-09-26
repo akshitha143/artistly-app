@@ -72,7 +72,7 @@ export const  TableRowPlanner = ({ req, handleAction })=>{
         <tr tabIndex={0} className="border-b focus:bg-gray-50 hover:bg-gray-50 transition-colors duration-200">
             <td className="px-4 py-2 text-sm md:text-base">{req.artistName}</td>
             <td className="px-4 py-2 text-sm md:text-base">{req.eventDate}</td>
-            <td className="px-4 py-2 text-sm md:text-base">{req.manager}</td>
+            <td className="px-4 py-2 text-sm md:text-base">{req.planner}</td>
             <td className="px-4 py-2 text-sm md:text-base">
                 <Badge variant={
                   req.status === "Approved" 

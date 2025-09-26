@@ -5,6 +5,7 @@ import { Select, SelectTrigger, SelectValue, SelectContent, SelectItem } from "@
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { RequestTable ,TableRowManager} from "@/components/tables/RequestTable";
 import Dropdown from "@/components/common/Dropdown";
+import { useUser } from "@/context/UserContext";
 
 // export const metadata = {
 //   title: "Booking Requests",
@@ -21,9 +22,10 @@ const mockRequests = [
 ];
 
 export default function RequestsPage() {
-  const [requests, setRequests] = useState(mockRequests);
+  // const [requests, setRequests] = useState(mockRequests);
   const [statusFilter, setStatusFilter] = useState("all");
   const [searchQuery, setSearchQuery] = useState("");
+  const {requests,setRequests} = useUser();
 
   const handleAction = (id, action) => {
     setRequests(prev => prev.map(req => req.id === id ? { ...req, status: action } : req));
